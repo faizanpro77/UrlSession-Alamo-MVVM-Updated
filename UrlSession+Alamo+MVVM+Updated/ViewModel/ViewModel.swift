@@ -16,10 +16,15 @@ class ViewModel {
     
     func fetchDetails() {
         APIManager.shared.getAllUserData { [weak self] (users) in
+//            guard let`self` = self else { return }
             if let users = users {
+//                self.userData = users
                 self?.userData = users
-                print(self?.userData)
+                print(users)
+                
+//                self.reload?()
                 self?.reload?()
+                
                 
             }else{
                 print("Somthing went wrong")

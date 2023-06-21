@@ -40,6 +40,7 @@ class UserCell: UITableViewCell {
         }
         
         lblTiltle.text = modelUser?.title
+        
         let status = modelUser?.getStatusColour()
         
         lblStatus.text = status?.0
